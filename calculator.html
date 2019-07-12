@@ -5,9 +5,16 @@
 	<title>Calculator</title>
 	<meta charset="utf-8">
 	<script type="text/javascript">
-		function cube() {
+		function dan_oper(a) {
 			var num = document.getElementById("n1");
-			num.value = Math.pow(num.value, 3);
+			switch(a) {
+				case 0:     // cls
+					num.value = ""; 
+					break;
+				case 1:     // x^3
+					num.value = Math.pow(num.value, 3);
+					break;
+			}
 		}
 	</script>
 </head>
@@ -18,9 +25,10 @@
 		Number: <input type="text" id="n1">
 	</div>
 	<div class="controles">
-		<p> <button onclick="cube()"> x^3 </button> </p>
-		<p> <button> C </button> </p>
-		<P> </P>
+	<p>
+		<button onclick="dan_oper(0)"> C </button> 
+		<button onclick="dan_oper(1)"> x^3 </button> 
+	</p>
 	</div>
 </body>
 
