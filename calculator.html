@@ -14,8 +14,11 @@
 				case 1:     // x^3
 					num.value = Math.pow(num.value, 3);
 					break;
-				case 5:
+				case 5:    // x^2
 					num.value = Math.pow(num.value, 2);
+					break;
+				case 6:   // 1/x 
+					num.value = 1 / num.value;
 					break;
 			}
 		}
@@ -32,6 +35,7 @@
 		<button onclick="dan_oper(0)"> C </button> 
 		<button onclick="dan_oper(1)"> x^3 </button> 
 		<button onclick="dan_oper(5)"> x^2 </button> 
+		<button onclick="dan_oper(6)"> 1/x </button> 
 	</p>
 	</div>
 </body>
